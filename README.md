@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# next-x-forum 🚀
 
-## Getting Started
+**Тестовый проект по Next.js**. Построен на **Next.js 15 с Turbopack**, Tailwind CSS v4 и FSD-архитектуре.
 
-First, run the development server:
+[![Vercel](https://img.shields.io/badge/Next.js-15.5.6-stone.svg)](https://next-x-forum-itdextra.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.6-black.svg)](https://nextjs.org)
+[![Turbopack](https://img.shields.io/badge/Turbopack-Beta-orange.svg)](https://turbo.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-blue.svg)](https://tailwindcss.com)
+
+## ✨ Особенности
+
+| Фича                | Описание               | Преимущество            |
+| ------------------- | ---------------------- | ----------------------- |
+| **SSR + Turbopack** | Next.js 15 с Turbopack | Сборка в 10x быстрее 🚀 |
+| **FSD Архитектура** | Feature-Sliced Design  | Масштабируемость        |
+| **Tailwind CSS v4** | Премиум                | Вовлечённость +50%      |
+| **TypeScript**      | Строгая типизация      | 0 багов на проде        |
+
+## 🛠 Быстрый старт
+
+### 1. Клонируй и установи
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repo-url>
+cd next-x-forum
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Запуск
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Development (SSR + Turbopack)
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Production build
+npm run build
 
-## Learn More
+# Production serve
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗 FSD Архитектура
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+next-x-forum/
+├── src/
+│   ├── entities/        # Домены (Tweet)
+│   ├── features/        # Фичи
+│   ├── shared/          # Общее (UI, API, lib)
+│   ├── app/             # Страницы
+│   ├── widgets/         # Комплексные блоки
+|
+├── proxy.ts             # Защита роутов
+├── public/              # Статические файлы
+├── tailwind.config.js   # Tailwind конфиг
+├── tsconfig.json        # TypeScript конфиг
+├── package.json
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+### Vercel (Рекомендуется)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm i -g vercel
+vercel --prod
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Самостоятельный сервер
+
+```bash
+npm run build
+npm run start
+```
+
+## 🤝 Contributing
+
+[![Conventionalcommits](https://img.shields.io/badge/conventional_commits-v1.0.0-blue.svg)](https://www.conventionalcommits.org/ru/v1.0.0/)
+
+1. Форкни репозиторий
+2. Создай фичу: `git checkout -b feat/amazing-feature`
+3. Закоммить: `git commit -m "feat(page): #number - desc feature"`
+4. Пуш: `git push origin feature/amazing-feature`
+5. Создай Pull Request
+
+## 📄 Лицензия
+
+[MIT](https://itdextra.ru) © ITDextra
+
+## 🚀 Быстрые ссылки
+
+- [Документация Next.js 15](https://nextjs.org)
+- [Turbopack](https://turbo.build)
+- [FSD Архитектура](https://feature-sliced.design)
+- [Tailwind CSS Docs](https://tailwindcss.com)

@@ -9,11 +9,11 @@ export const TweetForm: FC = () => {
 		<form
 			action={postTweet}
 			className={cn(
-				'border border-white/10 rounded-xl p-4 w-xl',
+				'border border-white/10 rounded-xl p-4 w-full max-w-xl',
 				'text-white space-y-3'
 			)}
 		>
-			<input
+			<textarea
 				name='content'
 				placeholder={`What's happening?`}
 				className={cn(
